@@ -8,7 +8,7 @@ public class Solution_IPL_Project {
     public static void main(String[] args) {
             HashMap<Integer,Integer> Year_match=new HashMap<>();
             HashMap<HashMap<Integer,String>,Integer> nm=new HashMap<>();
-            HashMap<Integer,String> kf=new HashMap<>();
+            HashMap<Integer,String> y_t=new HashMap<>();
             Integer val;
             String iplFile = "/home/pankajkumar/Desktop/IPL_Project/IPL/matches.csv";
             String line = "";
@@ -30,7 +30,19 @@ public class Solution_IPL_Project {
                               Year_match.put(val,1);
                           }
                       }
+                      y_t.clear();
+
+                      y_t.clear();
+                      y_t.put(val,row[10]);
+                      if(nm.containsKey(y_t)){
+                          nm.put(y_t,nm.get(y_t)+1);
+                      }
+                      else{
+                          nm.put(y_t,1);
+                      }
                   }
+
+
 
 
                     /*
@@ -77,18 +89,23 @@ public class Solution_IPL_Project {
                 }
             }
             Scanner sc=new Scanner(System.in);
-            IPLMatchPlayedEveryaYear c1=new IPLMatchPlayedEveryaYear();
-           Integer Year=sc.nextInt();
-         if(Year<2008 || Year>2017){
-             try{
-                 throw new myexception();
-             }
-             catch (myexception d){
-                 d.printStackTrace();
-             }
-         }
-        c1.totalMatchInYear(Year_match,Year);
-        System.out.println();
+            Integer year=sc.nextInt();
+            String team=sc.nextLine();
+        if(year<2008 || year>2017){
+            try{
+                throw new myexception();
+            }
+            catch (myexception d){
+                d.printStackTrace();
+            }
+        }
+        else {
+            IPLMatchPlayedEveryaYear c1 = new IPLMatchPlayedEveryaYear();
+            c1.totalMatchInYear(Year_match,year);
+            //NumberOfMatchesWon c2 = new NumberOfMatchesWon();
+
+            c1.wonMatches(nm,year,team);
+        }
 
     }
 }
