@@ -88,9 +88,11 @@ public class Solution_IPL_Project {
                     throw new RuntimeException(e);
                 }
             }
+            y_t.clear();
             Scanner sc=new Scanner(System.in);
-            Integer year=sc.nextInt();
             String team=sc.nextLine();
+            Integer year =sc.nextInt();
+            y_t.put(year,team);
         if(year<2008 || year>2017){
             try{
                 throw new myexception();
@@ -104,7 +106,7 @@ public class Solution_IPL_Project {
             c1.totalMatchInYear(Year_match,year);
             //NumberOfMatchesWon c2 = new NumberOfMatchesWon();
 
-            c1.wonMatches(nm,year,team);
+            c1.wonMatches(nm,year,team,y_t);
         }
 
     }
