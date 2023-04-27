@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-public class Solution_IPL_Project {
+public class Scenario_1_and_Scenario_2 {
     public static void main(String[] args) {
              String [] list=new String[10];
              HashMap<Integer,Integer> Year_match=new HashMap<>();

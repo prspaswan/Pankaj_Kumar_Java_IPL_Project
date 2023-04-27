@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class bowler_and_extras {
+public class Scenario3_and_scenario4{
     public static void main(String[] args) throws IOException {
 
         String file = "/home/pankajkumar/Desktop/IPL_Project/IPL/deliveries.csv";
@@ -26,10 +26,10 @@ public class bowler_and_extras {
                     int val = Integer.parseInt(row[0]);
                     if (val >= 577) {
                         Integer ex_run = Integer.parseInt(row[16]);
-                        if (extra_run.containsKey(row[2])) {
-                            extra_run.put(row[2], extra_run.get(row[2]) + ex_run);
+                        if (extra_run.containsKey(row[3])) {
+                            extra_run.put(row[3], extra_run.get(row[3]) + ex_run);
                         } else {
-                            extra_run.put(row[2], ex_run);
+                            extra_run.put(row[3], ex_run);
                         }
                     }
                     if (val >= 518 && val <= 576) {

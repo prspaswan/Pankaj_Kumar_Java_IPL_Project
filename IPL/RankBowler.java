@@ -6,8 +6,12 @@ import java.io.IOException;
 import java.util.*;
 public class RankBowler {
     public void Extras_in_2016(HashMap<String, Integer> extra_run,String team) {
-
-        System.out.println("Total Extra in 2016 by "+team+" is " +extra_run.get(team));
+        if(extra_run.containsKey(team)) {
+            System.out.println("Total Extra in 2016 given by " + team + " is " + extra_run.get(team));
+        }
+        else{
+            System.out.println(team+" did not played in 2016");
+        }
     }
 
     public void Top_bowler(int c, String[] rank, Integer[] array, HashMap<String, Integer> calc) {
