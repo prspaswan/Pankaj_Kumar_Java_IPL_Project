@@ -6,6 +6,7 @@ import java.util.*;
 
 public class Scenario_1_and_Scenario_2 {
     public static void main(String[] args) {
+             Integer [] list_for_tie_matches={0,0,0,0,0,0,0,0,0,0};
              String [] list=new String[10];
              HashMap<Integer,Integer> Year_match=new HashMap<>();
              HashSet<String> allTeam= new HashSet<>();
@@ -29,6 +30,9 @@ public class Scenario_1_and_Scenario_2 {
                     if (!row[1].equals("season")) {
                         val = Integer.parseInt(row[1]);
                         if (row[8].equals("tie") || row[8].equals("normal")) {
+                            if(row[8].equals("tie")){
+                                list_for_tie_matches[val%2008]+=1;
+                            }
                             if (Year_match.containsKey(val)) {
                                 Year_match.put(val, Year_match.get(val) + 1);
                             } else {
@@ -88,6 +92,7 @@ public class Scenario_1_and_Scenario_2 {
             c1.wonMatches(nm,year,team,y_t);
             myscenario c3=new myscenario();
             c3.whoIsWinner(list,year);
+            c3.tiematches(list_for_tie_matches,year);
 
         }
 
