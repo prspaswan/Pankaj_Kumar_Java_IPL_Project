@@ -42,40 +42,6 @@ public class Solution_IPL_Project {
                       }
                   }
 
-
-
-
-                    /*
-                    HashMap<Integer,String> kf=new HashMap<>();
-            kf.put(88,"jfd");
-            for (String[] row : csvData) {
-
-                //System.out.println(Arrays.toString(row));
-                String s=Arrays.toString(row);
-                //System.out.println(s);
-                ld=s.split(", ");
-               if(!ld[1].equals("season")){
-                 Integer val=Integer.parseInt(ld[1]);
-                   //System.out.println(ld[8]);
-                   if(ld[8].equals("tie") || ld[8].equals("normal")){
-                       if(nf.containsKey(val)){
-                           nf.put(val,nf.get(val)+1);
-                       }
-                       else {
-                           nf.put(val, 1);
-                       }
-                       //HashMap<Integer,String> kf=new HashMap<>();
-                       kf.clear();
-                       kf.put(val,ld[10]);
-                       if(nm.containsKey(kf)){
-                           nm.put(kf,nm.get(kf)+1);
-                       }
-                       else{
-                           nm.put(kf,1);
-                       }
-                     */
-
-
                 }
             }
              catch (IOException e) {
