@@ -27,9 +27,9 @@ public class RankBowler {
                 }
             }
         }
-        System.out.println("The Rank are as follows");
+        System.out.println("For the year 2015 get the top economical bowlers are as follows");
         for (i = 0; i < c; i++) {
-            System.out.print(rank[i]+" ");
+            System.out.println(i+1+" "+rank[i]);
         }
 
     }
